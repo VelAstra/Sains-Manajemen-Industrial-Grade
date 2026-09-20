@@ -110,15 +110,15 @@ Sains-Manajemen-Industrial-Grade/
 │       ├── monthly_returns_heatmap.png   # Heatmap return bulanan 84 bulan
 │       ├── instrument_performance_comparison.png # Bar chart kinerja 10 instrumen
 │       └── asset_allocation_radar.png    # Diagram distribusi risiko portofolio
-├── report/
-│   ├── generate_report_docx.py           # Generator laporan Word (.docx) resmi UGM
-│   ├── generate_report_pdf.py            # Generator laporan PDF (.pdf) resmi UGM
-│   ├── Laporan_Project_2_Sains_Manajemen_Industrial_Grade_Rayhan_Haldi_545406.docx
-│   └── Laporan_Project_2_Sains_Manajemen_Industrial_Grade_Rayhan_Haldi_545406.pdf
-├── docs/
-│   ├── Laporan_Project_2_Sains_Manajemen_Industrial_Grade_Rayhan_Haldi_545406.docx
-│   └── Laporan_Project_2_Sains_Manajemen_Industrial_Grade_Rayhan_Haldi_545406.pdf
-├── compile_all.py                        # Script otomatisasi kompilasi MetaEditor
+├── scripts/
+│   ├── compile_all.py                    # Otomatisasi kompilasi MetaEditor 64
+│   ├── audit_metrics.py                  # Audit kepatuhan metrik kuantitatif
+│   ├── generate_all_eas.py               # Generator template EA
+│   ├── generate_report_docx.py           # Generator laporan Word (.docx)
+│   └── generate_report_pdf.py            # Generator laporan PDF (.pdf)
+├── Project 2 - Industrial Grade - Rayhan Haldi - 545406.docx # Laporan resmi Word (DOCX)
+├── Project 2 - Industrial Grade - Rayhan Haldi - 545406.pdf  # Laporan resmi PDF
+├── Instruksi 2.txt                       # Berkas instruksi tugas
 └── README.md                             # Dokumentasi repositori
 ```
 
@@ -192,9 +192,9 @@ SELURUH EA BERHASIL DIKOMPILASI DENGAN 0 ERRORS, 0 WARNINGS!
 
 ## Laporan Akademik Lengkap
 
-Dokumen laporan lengkap berstandar akademik resmi Universitas Gadjah Mada (UGM) tersedia dalam dua format di folder [`docs/`](docs/) dan [`report/`](report/):
-- **Dokumen Word (.docx):** [`Laporan_Project_2_Sains_Manajemen_Industrial_Grade_Rayhan_Haldi_545406.docx`](docs/Laporan_Project_2_Sains_Manajemen_Industrial_Grade_Rayhan_Haldi_545406.docx)
-- **Dokumen PDF (.pdf):** [`Laporan_Project_2_Sains_Manajemen_Industrial_Grade_Rayhan_Haldi_545406.pdf`](docs/Laporan_Project_2_Sains_Manajemen_Industrial_Grade_Rayhan_Haldi_545406.pdf)
+Dokumen laporan lengkap berstandar akademik resmi Universitas Gadjah Mada (UGM) tersedia dalam format Word dan PDF (persis seperti format Proyek 1):
+- **Dokumen Word (.docx):** [`Project 2 - Industrial Grade - Rayhan Haldi - 545406.docx`](Project%202%20-%20Industrial%20Grade%20-%20Rayhan%20Haldi%20-%20545406.docx)
+- **Dokumen PDF (.pdf):** [`Project 2 - Industrial Grade - Rayhan Haldi - 545406.pdf`](Project%202%20-%20Industrial%20Grade%20-%20Rayhan%20Haldi%20-%20545406.pdf)
 
 ---
 

@@ -1,0 +1,16 @@
+2. Gunakan fasilitas tersebut untuk membuat proyek dengan spesifikasi seperti pada file terlampir:
+3. Backtest dan optimasi sesuai No. 2 pada 10 instrumen (sedikit bebas) dengan pilihan sebaiknya terdiri dari:
+a. Forex, contoh: USDJPY, EURUSD, dll
+b. Logam, contoh : emas (Gold atau XAU), perak
+c. Index, contoh : JP225, dll
+d. crypto, contoh: BTC, ETH
+e. energi, contoh Brent, WTI Oil dll
+4. NO Martiangle atau GRID atau HFT: high frequency trading),
+5. NO Leverage, Target bulanan antara 3% sampai dengan 5%, Maximal DD 25-30%
+6. Target tahunan sekitar 50% sampai dengan 70%
+7. Tidak ada bulan loss lebih dari enam bulan dalam setahun
+8. Backtest selama 7 tahun terakhir dengan pilihan every tick based on real tick
+9. Menggunakan broker Exness dan akun real hanya untuk backtest
+10. Time frame yang digunakan adalah bebas
+11. Lampirkan kode projek
+10. Buat laporan backtest hasil proyek dan optimasinya

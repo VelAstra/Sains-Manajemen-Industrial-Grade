@@ -145,6 +145,16 @@ def create_full_report_docx():
         "6. Mempublikasikan seluruh kode sumber, binary terkompilasi (.ex5), hasil backtest, visualisasi, dan laporan lengkap ke repositori GitHub."
     )
 
+    doc.add_heading("1.3 Tinjauan Referensi & Tautan Repositori Proyek", level=2)
+    p_repo = doc.add_paragraph()
+    p_repo.add_run(
+        "Mengacu pada standar dokumentasi terbuka Proyek #1, seluruh artefak teknis Proyek #2 ini dapat diakses secara publik melalui tautan resmi berikut:\n"
+        "• Tautan Repositori GitHub: https://github.com/VelAstra/Sains-Manajemen-Industrial-Grade\n"
+        "• Tautan Kode Sumber MQL5 (.mq5 & .ex5): https://github.com/VelAstra/Sains-Manajemen-Industrial-Grade/tree/main/MQL5\n"
+        "• Repositori Referensi Proyek #1: https://github.com/VelAstra/Sains-Manajemen-10-EA-dengan-AI\n"
+        "• Kanal Referensi EA MetaTrader 5: René Balke (BM Trading: https://youtu.be/T78Q7K3c11s / https://en.bmtrading.de) & IQCapital (https://www.youtube.com/@IQCapital_io)"
+    )
+
     # ==================== BAB 2: LANDASAN TEORI & METODOLOGI ====================
     doc.add_heading("2. Landasan Teori & Metodologi Manajemen Risiko", level=1)
     
@@ -477,26 +487,21 @@ def create_full_report_docx():
     p_ref = doc.add_paragraph()
     p_ref.add_run(
         "1. Markowitz, H. (1952). Portfolio Selection. The Journal of Finance, 7(1), 77–91.\n"
-        "2. Balke, René. BM Trading — Free Expert Advisors for MetaTrader 5. https://en.bmtrading.de\n"
-        "3. René Balke. Fully Working Moving Average MT5 Expert Advisor Programming Tutorial. YouTube: https://youtu.be/T78Q7K3c11s\n"
-        "4. IQCapital. Automated Forex & Multi-Asset Systems. YouTube: https://www.youtube.com/@IQCapital_io\n"
-        "5. MetaQuotes Software Corp. MQL5 Reference: Algorithms and Trading Functions. https://www.mql5.com/en/docs\n"
-        "6. Exness Global Ltd. Contract Specifications & Tick Data Architecture. https://www.exness.com\n"
+        "2. Balke, René. BM Trading — Free Expert Advisors for MetaTrader 5. https://en.bmtrading.de (diakses 8 September 2026).\n"
+        "3. René Balke. Fully Working Moving Average MT5 Expert Advisor Programming Tutorial. YouTube: https://youtu.be/T78Q7K3c11s (diakses 8 September 2026).\n"
+        "4. IQCapital. Automated Forex & Multi-Asset Systems. YouTube: https://www.youtube.com/@IQCapital_io (diakses 8 September 2026).\n"
+        "5. MetaQuotes Software Corp. MQL5 Reference: Algorithms and Trading Functions. https://www.mql5.com/en/docs (diakses 8 September 2026).\n"
+        "6. Exness Global Ltd. Contract Specifications & Tick Data Architecture. https://www.exness.com (diakses 20 September 2026).\n"
         "7. Hermawan, Rayhan Haldi. (2026). Laporan Proyek #1: Pembuatan Sepuluh Expert Advisor (EA) untuk MetaTrader 5. "
         "Departemen Ilmu Komputer dan Elektronika, FMIPA UGM.\n"
-        "8. Repositori Proyek #1: https://github.com/VelAstra/Sains-Manajemen-10-EA-dengan-AI\n"
-        "9. Repositori Proyek #2: https://github.com/VelAstra/Sains-Manajemen-Industrial-Grade\n"
+        "8. Repositori Proyek #1: https://github.com/VelAstra/Sains-Manajemen-10-EA-dengan-AI (diakses 8 September 2026).\n"
+        "9. Repositori Proyek #2: https://github.com/VelAstra/Sains-Manajemen-Industrial-Grade (diakses 20 September 2026).\n"
     )
 
-    # Simpan dokumen Word
-    out_docx_path = os.path.join("report", "Laporan_Project_2_Sains_Manajemen_Industrial_Grade_Rayhan_Haldi_545406.docx")
+    # Simpan dokumen Word tunggal di root
+    out_docx_path = "Project 2 - Industrial Grade - Rayhan Haldi - 545406.docx"
     doc.save(out_docx_path)
     print(f"Laporan DOCX berhasil disimpan di: {out_docx_path}")
-
-    # Simpan juga di folder docs/
-    docs_docx_path = os.path.join("docs", "Laporan_Project_2_Sains_Manajemen_Industrial_Grade_Rayhan_Haldi_545406.docx")
-    doc.save(docs_docx_path)
-    print(f"Salinan DOCX berhasil disimpan di: {docs_docx_path}")
 
 if __name__ == '__main__':
     create_full_report_docx()

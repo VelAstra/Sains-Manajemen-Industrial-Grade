@@ -47,8 +47,7 @@ def generate_pdf_report():
     with open(summary_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
-    pdf_filename = os.path.join("report", "Laporan_Project_2_Sains_Manajemen_Industrial_Grade_Rayhan_Haldi_545406.pdf")
-    docs_pdf_filename = os.path.join("docs", "Laporan_Project_2_Sains_Manajemen_Industrial_Grade_Rayhan_Haldi_545406.pdf")
+    pdf_filename = "Project 2 - Industrial Grade - Rayhan Haldi - 545406.pdf"
 
     doc = SimpleDocTemplate(
         pdf_filename,
@@ -220,6 +219,15 @@ def generate_pdf_report():
         "4. Membuktikan tercapainya target 50%–70%/tahun, 3%–5%/bulan, Max DD < 30%, dan bulan loss <= 6 per tahun.",
         style_body
     ))
+    elements.append(Paragraph("1.3 Tinjauan Referensi & Tautan Repositori Proyek", style_h2))
+    elements.append(Paragraph(
+        "Mengacu pada standar dokumentasi terbuka Proyek #1, seluruh artefak teknis Proyek #2 ini dapat diakses secara publik melalui tautan resmi berikut:<br/>"
+        "• <b>Tautan Repositori GitHub:</b> <font color=\"#1F497D\"><u><a href=\"https://github.com/VelAstra/Sains-Manajemen-Industrial-Grade\">https://github.com/VelAstra/Sains-Manajemen-Industrial-Grade</a></u></font><br/>"
+        "• <b>Tautan Kode Sumber MQL5 (.mq5 & .ex5):</b> <font color=\"#1F497D\"><u><a href=\"https://github.com/VelAstra/Sains-Manajemen-Industrial-Grade/tree/main/MQL5\">https://github.com/VelAstra/Sains-Manajemen-Industrial-Grade/tree/main/MQL5</a></u></font><br/>"
+        "• <b>Repositori Referensi Proyek #1:</b> <font color=\"#1F497D\"><u><a href=\"https://github.com/VelAstra/Sains-Manajemen-10-EA-dengan-AI\">https://github.com/VelAstra/Sains-Manajemen-10-EA-dengan-AI</a></u></font><br/>"
+        "• <b>Kanal Referensi EA MetaTrader 5:</b> René Balke (BM Trading: <a href=\"https://youtu.be/T78Q7K3c11s\">YouTube</a> / <a href=\"https://en.bmtrading.de\">Website</a>) & IQCapital (<a href=\"https://www.youtube.com/@IQCapital_io\">YouTube</a>)",
+        style_body
+    ))
 
     # ==================== BAB 2: METODOLOGI ====================
     elements.append(Paragraph("2. Landasan Teori & Metodologi Manajemen Risiko", style_h1))
@@ -370,25 +378,20 @@ def generate_pdf_report():
     elements.append(Paragraph("7. Referensi", style_h1))
     elements.append(Paragraph(
         "1. Markowitz, H. (1952). Portfolio Selection. The Journal of Finance, 7(1), 77–91.<br/>"
-        "2. Balke, René. BM Trading — Free Expert Advisors for MetaTrader 5. https://en.bmtrading.de<br/>"
-        "3. René Balke. Fully Working Moving Average MT5 EA Programming Tutorial. YouTube: https://youtu.be/T78Q7K3c11s<br/>"
-        "4. IQCapital. Automated Forex & Multi-Asset Systems. YouTube: https://www.youtube.com/@IQCapital_io<br/>"
-        "5. MetaQuotes Software Corp. MQL5 Reference: Trading Functions. https://www.mql5.com/en/docs<br/>"
-        "6. Exness Global Ltd. Contract Specifications & Real Tick Architecture. https://www.exness.com<br/>"
-        "7. Hermawan, Rayhan Haldi. (2026). Laporan Proyek #1: 10 EA dengan AI. FMIPA UGM.<br/>"
-        "8. Repositori Proyek #1: https://github.com/VelAstra/Sains-Manajemen-10-EA-dengan-AI<br/>"
-        "9. Repositori Proyek #2: https://github.com/VelAstra/Sains-Manajemen-Industrial-Grade",
+        "2. Balke, René. BM Trading — Free Expert Advisors for MetaTrader 5. <a href=\"https://en.bmtrading.de\">https://en.bmtrading.de</a> (diakses 8 September 2026).<br/>"
+        "3. René Balke. Fully Working Moving Average MT5 EA Programming Tutorial. YouTube: <a href=\"https://youtu.be/T78Q7K3c11s\">https://youtu.be/T78Q7K3c11s</a> (diakses 8 September 2026).<br/>"
+        "4. IQCapital. Automated Forex & Multi-Asset Systems. YouTube: <a href=\"https://www.youtube.com/@IQCapital_io\">https://www.youtube.com/@IQCapital_io</a> (diakses 8 September 2026).<br/>"
+        "5. MetaQuotes Software Corp. MQL5 Reference: Trading Functions. <a href=\"https://www.mql5.com/en/docs\">https://www.mql5.com/en/docs</a> (diakses 8 September 2026).<br/>"
+        "6. Exness Global Ltd. Contract Specifications & Real Tick Architecture. <a href=\"https://www.exness.com\">https://www.exness.com</a> (diakses 20 September 2026).<br/>"
+        "7. Hermawan, Rayhan Haldi. (2026). Laporan Proyek #1: 10 EA dengan AI. Departemen Ilmu Komputer dan Elektronika, FMIPA UGM.<br/>"
+        "8. Repositori Proyek #1: <font color=\"#1F497D\"><u><a href=\"https://github.com/VelAstra/Sains-Manajemen-10-EA-dengan-AI\">https://github.com/VelAstra/Sains-Manajemen-10-EA-dengan-AI</a></u></font> (diakses 8 September 2026).<br/>"
+        "9. Repositori Proyek #2: <font color=\"#1F497D\"><u><a href=\"https://github.com/VelAstra/Sains-Manajemen-Industrial-Grade\">https://github.com/VelAstra/Sains-Manajemen-Industrial-Grade</a></u></font> (diakses 20 September 2026).",
         style_body
     ))
 
     # Build PDF
     doc.build(elements, canvasmaker=NumberedCanvas)
     print(f"Laporan PDF berhasil disimpan di: {pdf_filename}")
-
-    # Salin juga ke docs/
-    import shutil
-    shutil.copy(pdf_filename, docs_pdf_filename)
-    print(f"Salinan PDF berhasil disimpan di: {docs_pdf_filename}")
 
 if __name__ == '__main__':
     generate_pdf_report()

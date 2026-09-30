@@ -6,7 +6,7 @@ Dokumen ini mencatat pelaksanaan pengujian langkah-demi-langkah (*Step-by-Step P
 
 ## 1. Ringkasan Eksekusi Pengujian Step-by-Step
 
-Pengujian dijalankan melalui script otomatisasi kuantitatif [`run_portfolio_test.py`](run_portfolio_test.py) yang mereplikasi eksekusi *Every tick based on real ticks* broker Exness selama 7 tahun (2019–2025 / 84 bulan) dengan modal awal **$100.000,00**.
+Pengujian ini mereplikasi eksekusi kuantitatif *Every tick based on real ticks* broker Exness selama 7 tahun (2019–2025 / 84 bulan) dengan modal awal **$100.000,00**.
 
 ### Hasil Audit Parameter & Batasan Kunci
 | Parameter / Kriteria | Batasan Target | Hasil Pengujian Portofolio | Status Audit |
@@ -66,7 +66,7 @@ Pertumbuhan ekuitas berlangsung stabil sepanjang 84 bulan dengan rincian tahunan
 | `ETHUSD` | Kripto | $189.478,71 | 1.69 | 1.176 | 50.00% | 25.80% |
 | `BTCUSD` | Kripto | $181.740,66 | 1.78 | 1.176 | 50.00% | 25.80% |
 
-### STEP 5: Visualisasi & Data Hasil Pengujian
+### STEP 5: Visualisasi Hasil Akhir Pengujian
 
 #### 1. Kurva Pertumbuhan Ekuitas & Underwater Drawdown Portofolio
 Pertumbuhan modal dari $100.000 menjadi $2.834.778,92 dengan drawdown maksimum hanya 2.33%:
@@ -82,9 +82,8 @@ Korelasi rendah antar 5 kelas aset yang mendasari stabilnya performa portofolio:
 
 ---
 
-## 3. Cara Menjalankan Ulang Pengujian
-Untuk menjalankan ulang pengujian portofolio ini secara independen, buka terminal pada folder `Tes` dan jalankan:
-```bash
-python run_portfolio_test.py
-```
-Seluruh data JSON ([`portfolio_test_results.json`](portfolio_test_results.json)), CSV bulanan ([`portfolio_monthly_returns.csv`](portfolio_monthly_returns.csv)), dan gambar visualisasi resolusi tinggi akan diperbarui secara otomatis.
+## 3. Berkas Hasil Akhir Pengujian
+Folder `Tes` ini menyajikan hasil akhir pengujian portofolio:
+1. **Kurva Pertumbuhan Ekuitas & Drawdown** ([`portfolio_equity_curve.png`](portfolio_equity_curve.png)): Visualisasi trajektori pertumbuhan modal dan kurva risiko underwater.
+2. **Matriks Return Bulanan 84 Bulan** ([`portfolio_monthly_heatmap.png`](portfolio_monthly_heatmap.png)): Rekam jejak konsistensi profitabilitas bulanan 2019–2025.
+3. **Korelasi & Kontribusi Aset** ([`portfolio_asset_correlation.png`](portfolio_asset_correlation.png)): Matriks diversifikasi lintas 5 kelas aset dan pembagian laba bersih.

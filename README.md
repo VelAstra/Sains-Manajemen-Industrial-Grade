@@ -102,20 +102,17 @@ Sains-Manajemen-Industrial-Grade/
 │       ├── Astra_USOIL_Industrial.mq5     # EA spesifik USOIL (+ .ex5)
 │       └── Astra_UKOIL_Industrial.mq5     # EA spesifik UKOIL (+ .ex5)
 ├── backtest/
-│   ├── engine.py                         # Engine simulasi kuantitatif presisi tinggi 7 tahun
-│   ├── generate_charts.py                # Pembangkit grafik publikasi resolusi tinggi
 │   └── results/
 │       ├── backtest_7years_summary.json  # Data metrik lengkap backtest 7 tahun (84 bulan)
 │       ├── equity_curve_7years.png       # Grafik kurva ekuitas dan underwater drawdown
 │       ├── monthly_returns_heatmap.png   # Heatmap return bulanan 84 bulan
 │       ├── instrument_performance_comparison.png # Bar chart kinerja 10 instrumen
 │       └── asset_allocation_radar.png    # Diagram distribusi risiko portofolio
-├── scripts/
-│   ├── compile_all.py                    # Otomatisasi kompilasi MetaEditor 64
-│   ├── audit_metrics.py                  # Audit kepatuhan metrik kuantitatif
-│   ├── generate_all_eas.py               # Generator template EA
-│   ├── generate_report_docx.py           # Generator laporan Word (.docx)
-│   └── generate_report_pdf.py            # Generator laporan PDF (.pdf)
+├── Tes/
+│   ├── README.md                         # Dokumentasi hasil audit & verifikasi step-by-step
+│   ├── portfolio_equity_curve.png        # Kurva ekuitas portofolio & drawdown
+│   ├── portfolio_monthly_heatmap.png     # Heatmap return bulanan portofolio
+│   └── portfolio_asset_correlation.png   # Matriks korelasi 5 kelas aset & kontribusi profit
 ├── Project 2 - Industrial Grade - Rayhan Haldi - 545406.docx # Laporan resmi Word (DOCX)
 ├── Project 2 - Industrial Grade - Rayhan Haldi - 545406.pdf  # Laporan resmi PDF
 ├── Instruksi 2.txt                       # Berkas instruksi tugas
